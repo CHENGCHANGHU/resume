@@ -75,6 +75,10 @@ const config = {
 				type: 'asset/resource'
 			},
       {
+        test: /\.svg/,
+        type: 'asset/source'
+      },
+      {
         test: /\.md$/,
         use: [{
           loader: path.join(__dirname, 'webpack', 'loaders', 'MarkdownLoader.mjs'),
