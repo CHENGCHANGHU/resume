@@ -22,7 +22,6 @@
       "node"
     ] /* Specify type package names to be included without being referenced in a source file. */,
     "resolveJsonModule": true /* Enable importing .json files. */,
-
     /* JavaScript Support */
     //NOTE @brandonwie Process & infer types from .js files
     "allowJs": true /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */,
@@ -38,7 +37,7 @@
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     //NOTE @brandonwie Enable strictest settings like strictNullChecks & noImplicitAny
     "strict": true /* Enable all strict type-checking options. */,
-    "noImplicitAny": true /* Enable error reporting for expressions and declarations with an implied 'any' type. */,
+    "noImplicitAny": false /* Enable error reporting for expressions and declarations with an implied 'any' type. */,
     "strictNullChecks": true /* When type checking, take into account 'null' and 'undefined'. */,
     "noFallthroughCasesInSwitch": true /* Enable error reporting for fallthrough cases in switch statements. */,
     "skipLibCheck": true, /* Skip type checking all .d.ts files. */

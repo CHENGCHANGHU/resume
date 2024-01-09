@@ -4,7 +4,7 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { VueLoaderPlugin } from 'vue-loader';
 // import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import { CustomCleanPlugin } from './webpack-plugins/index.mjs';
+import { CustomCleanPlugin } from './webpack/plugins/index.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -73,7 +73,14 @@ const config = {
       {
 				test: /\.ttf$/,
 				type: 'asset/resource'
-			}
+			},
+      {
+        test: /\.md$/,
+        use: [{
+          loader: path.join(__dirname, 'webpack', 'loaders', 'MarkdownLoader.mjs'),
+          options: {},
+        }],
+      },
     ],
   },
   plugins: [
@@ -83,7 +90,7 @@ const config = {
       chunks: ['index'],
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash].css',
+      filename: 'dist/css/[name].[contenthash].css',
     }),
     // isDevelopment ? undefined : new CleanWebpackPlugin(),
     new CustomCleanPlugin([
