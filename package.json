@@ -42,6 +42,8 @@
   },
   "homepage": "https://github.com/CHENGCHANGHU/resume#readme",
   "dependencies": {
+    "@golden-tiger/dom": "^0.0.6",
+    "@golden-tiger/markdown": "^0.0.19",
     "vue": "^3.4.5"
   }
 }

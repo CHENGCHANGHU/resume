@@ -1,7 +1,19 @@
-# P1
+- 2016年，随行校园安卓端地图应用（Android，软著）
+- 2017年，视频弹幕播放网站原型系统（JS、JavaEE、MySQL）
+- 2018年
+  - 音乐推荐网站原型系统（JS、Django、MySQL）
+  - 羊肉溯源系统安卓端应用（Android）
+  - 公益义卖网站（JS、NodeJS，获“江苏省研究生公益创业科研创新实践大赛”二等奖）
+- 2019年，东大智库网站（Webplus可视化网站建设）
+- 2020年
+  - [ALLX学习笔记（原生JS）](https://chengchanghu.github.io/studynote/#linkContainer)
+  - [黄橙笔记（vuepress）](https://chengchanghu.github.io/allx-javascript/)
+- 2022年
+  - 图片/PDF查看器组件（Vue2）：实现了放大、缩小、PDF滚动换页的功能
+  - 页面编辑状态锁（Vue2/3）：单例模式，使用promise拦截vue-router和浏览器的跳转
+  - 前端接口类型及代码生成器（nodejs、puppeteer）：使用puppeteer代理浏览器获取yapi的接口响应，生成api的请求、响应参数ts接口定义与接口请求代码
+  - [JavaScript Manuscript](https://tigercheng.gitee.io/manuscript/)：使用web-component、webpack和iframe构建的多模块系统
+  - [@golden-tiger/difference](https://www.npmjs.com/package/@golden-tiger/difference)：JS npm包，使用广度优先递归遍历两个比较的值（或对象），可通过参数控制数组值的比较顺序、修改比较策略，输出差异项（键的数组、前值、后值），使用尾递归进行优化
+  - [@golden-tiger/regexp-gene](https://www.npmjs.com/package/@golden-tiger/regexp-gene)：JS npm包，从传入的正则表达式参数逆向生成满足该正则表达式的随机字符串
+  - [@golden-tiger/markdown](https://www.npmjs.com/package/@golden-tiger/markdown)：JS npm包，将markdown文本解析成html文本，支持了基本的md语法（标题、段落、列表、代码块、行内代码、超链接、图片、引用、表格等），并实现了跨行跨列的表格语法（`(-m)`跨m列，`(=n)`跨n行）
 
-project 1
-
-# P2
-
-project 2

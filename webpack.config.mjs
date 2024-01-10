@@ -1,5 +1,6 @@
 import path, { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import webpack from 'webpack';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { VueLoaderPlugin } from 'vue-loader';
@@ -88,10 +89,15 @@ const config = {
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: true,
+      __VUE_PROD_DEVTOOLS__: false,
+    }),
     new HTMLWebpackPlugin({
       name: 'index.html',
       template: join(__dirname, '.', 'public', 'index.html'),
       chunks: ['index'],
+      publicPath: isDevelopment ? '/' : '/resume',
     }),
     new MiniCssExtractPlugin({
       filename: 'dist/css/[name].[contenthash].css',

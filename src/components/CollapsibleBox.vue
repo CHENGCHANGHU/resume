@@ -1,5 +1,10 @@
 <template>
-  <div class="collapsible-box">
+  <div
+    class="collapsible-box"
+    :style="{
+      'grid-template-rows': `32px ${ collapsed ? 0 : 1 }fr`,
+    }"
+  >
     <div class="collapsible-header">
       <div
         v-html="arrowDownSvg"
@@ -35,11 +40,15 @@ const handleCollapse = () => {
 </script>
 
 <style lang="scss" scoped>
+.collapsible-box {
+  display: grid;
+  transition: all .3s ease-in-out;
+}
+
 .collapsible-header {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  // justify-content: space-between;
   column-gap: 8px;
 
   .arrow-icon {
@@ -52,5 +61,11 @@ const handleCollapse = () => {
   .arrow-icon-collapsed {
     transform: rotateX(180deg);
   }
+}
+
+.collapsible-content {
+  min-height: 0;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
 }
 </style>
