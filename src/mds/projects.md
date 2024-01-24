@@ -20,7 +20,7 @@
 - 2023年
   - 移动端组件库：Vue，实现页面框架组件（IntersectObserver）、抽屉组件（异步Animate动画、可扩展）、日期组件（垂直滚轮、IntersectObserver）、地址组件（CSS动画）、单/多选组件、列表组件（上滑加载、IntersectObserver、MutationObserver）、验证码组件（代理隐藏输入框）、步骤条组件（CSS变量、`:has`、`:where`、`:not`）
   - 低代码平台：Vue2，实现嵌套CSS和Style节点、布局组件（flex、grid）、修复domProps问题、应用
-  - [Resource Manager](https://resourcemanager.netlify.app/)：React、Netlify、Appwrite，使用需要登录，实现了登录注册模块、MD文档模块（`@golden-tiger/markdown`）、文件存储模块（大文件分块分批上传）、思维导图模块
+  - [Resource Manager](https://resourcemanager.netlify.app/)：React、Netlify、Appwrite，使用需要登录，实现了登录注册模块、MD文档模块（`@golden-tiger/markdown`）、文件存储模块（大文件分块分批上传）、思维导图模块，使用webpack分chunk优化性能
   - [Best Tools](https://best-tools.netlify.app/)：React、Netlify、iframe多模块，使用无需登录，实现了二维码生成功能、JS代码运行功能
   - [@golden-tiger/serializer](https://www.npmjs.com/package/@golden-tiger/serializer)：JS npm包，实现JS对象的序列化和反序列化，支持大整型和浮点数，序列化时可以生成HTML文本，反序列化时使用正则匹配对应的文本
   - [@golden-tiger/clone](https://www.npmjs.com/package/@golden-tiger/clone)：TS npm包，使用尾递归实现深拷贝，支持Undefined、Null、NaN、String、Number、BigInt、Boolean、Map、Set、Date、RegExp

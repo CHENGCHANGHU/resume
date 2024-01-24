@@ -8,31 +8,35 @@
           <div>前端开发工程师</div>
         </div>
       </div>
-      <dl class="detail-box">
-        <dt>籍贯</dt>
-        <dd>安徽桐城</dd>
-        <dt>出生年月</dt>
-        <dd>1997年1月</dd>
-        <dt>联系方式</dt>
-        <dd>13912970637</dd>
-        <dt>邮箱</dt>
-        <dd>1669675499@qq.com</dd>
-        <dt>毕业院校</dt>
-        <dd>东南大学</dd>
-        <dt>学历</dt>
-        <dd>硕士研究生</dd>
-        <dt>英语水平</dt>
-        <dd>六级</dd>
-        <dt>政治面貌</dt>
-        <dd>中共党员</dd>
-      </dl>
+      <CollapsibleBox title="个人信息">
+        <template #content>
+          <dl class="detail-box">
+            <dt>籍贯</dt>
+            <dd>安徽桐城</dd>
+            <dt>出生年月</dt>
+            <dd>1997年1月</dd>
+            <dt>联系方式</dt>
+            <dd>13912970637</dd>
+            <dt>邮箱</dt>
+            <dd>1669675499@qq.com</dd>
+            <dt>毕业院校</dt>
+            <dd>东南大学</dd>
+            <dt>学历</dt>
+            <dd>硕士研究生</dd>
+            <dt>英语水平</dt>
+            <dd>六级</dd>
+            <dt>政治面貌</dt>
+            <dd>中共党员</dd>
+          </dl>
+        </template>
+      </CollapsibleBox>
       <CollapsibleBox title="教育背景">
         <template #content>
           <div class="education-container">
             <span>2014.09-2018.06</span>
             <span>华北电力大学</span>
             <span>计算机科学与技术（学士学位）</span>
-            <span>主修课程：算法设计与分析、模式识别、软件项目管理与实践、人工智能、机器学习、数据挖掘与数据隐私。研究方向：自然语言处理</span>
+            <span>主修课程：算法设计与分析、模式识别、软件项目管理与实践、人工智能、机器学习、数据挖掘与数据隐私<br>研究方向：自然语言处理</span>
             <span>2018.09-2021.06</span>
             <span>东南大学</span>
             <span>计算机技术（硕士学位）</span>
@@ -59,6 +63,11 @@
           <div class="project-container" v-html="projectsHTML"></div>
         </template>
       </CollapsibleBox>
+      <CollapsibleBox title="代码风格">
+        <template #content>
+          <div class="project-container" v-html="codingStyleHTML"></div>
+        </template>
+      </CollapsibleBox>
     </div>
   </div>
 </template>
@@ -68,10 +77,14 @@ import { transform } from '@golden-tiger/markdown';
 import { createHTMLString } from '@golden-tiger/dom';
 import { CollapsibleBox } from '@/components/index';
 import { default as projects } from '@/mds/projects.md';
-
-console.log(projects);
+import { default as codingStyle } from '@/mds/coding-style.md';
 
 const projectsHTML = createHTMLString(transform(projects, { output: 'options' }), {
+  indentationToken: '',
+  beautify: false,
+});
+
+const codingStyleHTML = createHTMLString(transform(codingStyle, { output: 'options' }), {
   indentationToken: '',
   beautify: false,
 });
@@ -80,7 +93,7 @@ const projectsHTML = createHTMLString(transform(projects, { output: 'options' })
 <style lang="scss" scoped>
 .app-box {
   width: 100%;
-  height: 100%;
+  // height: 100%;
   padding: 16px;
   display: flex;
   flex-flow: row nowrap;
@@ -116,6 +129,7 @@ const projectsHTML = createHTMLString(transform(projects, { output: 'options' })
 }
 
 .detail-box {
+  padding-top: 8px;
   display: grid;
   gap: 8px;
   grid-template: auto/120px 1fr 120px 1fr;
