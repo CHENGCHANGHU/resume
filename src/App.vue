@@ -36,11 +36,11 @@
             <span>2014.09-2018.06</span>
             <span>华北电力大学</span>
             <span>计算机科学与技术（学士学位）</span>
-            <span>主修课程：算法设计与分析、模式识别、软件项目管理与实践、人工智能、机器学习、数据挖掘与数据隐私<br>研究方向：自然语言处理</span>
+            <span><b>主修课程：</b>C++高级语言程序设计、JAVA面向对象程序语言设计、数据库原理、J2EE开发平台及程序设计、算法与数据结构、计算机组成原理、计算机系统结构、计算机网络、操作系统</span>
             <span>2018.09-2021.06</span>
             <span>东南大学</span>
             <span>计算机技术（硕士学位）</span>
-            <span>主修课程：C++高级语言程序设计、JAVA面向对象程序语言设计、数据库原理、J2EE开发平台及程序设计、算法与数据结构、计算机组成原理、计算机系统结构、计算机网络、操作系统</span>
+            <span><b>主修课程：</b>算法设计与分析、模式识别、软件项目管理与实践、人工智能、机器学习、数据挖掘与数据隐私<br><b>研究方向：</b>自然语言处理</span>
           </div>
         </template>
       </CollapsibleBox>
@@ -54,7 +54,7 @@
             <span>2021.07-至今</span>
             <span>深圳虾皮信息科技有限公司</span>
             <span>卖家部门（前端开发）</span>
-            <span>先后就职于Seller Open Platform、Seller Onboarding团队，参与开放平台、卖家增值服务、卖家入驻服务、卖家入驻低代码平台的建设，主要使用Vue2、Vue3、React Native进行开发</span>
+            <span>先后就职于Seller Open Platform、Seller Onboarding团队，参与开发者开放平台、卖家增值服务、卖家入驻服务、卖家入驻低代码平台的建设，主要使用Vue2、Vue3、React Native进行开发</span>
           </div>
         </template>
       </CollapsibleBox>
@@ -109,7 +109,7 @@ const codingStyleHTML = createHTMLString(transform(codingStyle, { output: 'optio
   padding: 8px;
   display: flex;
   flex-flow: column nowrap;
-  row-gap: 16px;
+  row-gap: 24px;
   background-color: #fff;
   border-radius: 8px;
   box-sizing: border-box;

@@ -52,14 +52,18 @@ const handleCollapse = () => {
   column-gap: 8px;
 
   .arrow-icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     transition: all .3s ease-in-out;
     cursor: pointer;
   }
 
   .arrow-icon-collapsed {
     transform: rotateX(180deg);
+  }
+
+  h2 {
+    font-size: 20px;
   }
 }
 
