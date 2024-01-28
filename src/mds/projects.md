@@ -10,21 +10,46 @@
   - [黄橙笔记（vuepress）](https://chengchanghu.github.io/allx-javascript/)
 - **2021年**
   - **虾皮开发者开放平台**
+|平台|截图|功能|
+|:--|:-:|:--|
+|(=3)[Open Platform](https://open.shopee.com/)|![Open Platform](https://resourcemanager.netlify.app/api/storage/view?id=65b5ef675cef8ce0598d)|为开发者提供虾皮对外接口的文档和测试工具，便于卖家维护自己的ERP系统或第三方服务平台（店小秘等）集成虾皮平台|
+|![API Reference](https://resourcemanager.netlify.app/api/storage/view?id=65b616eee28bde6ed578)|虾皮对外接口文档|
+|![API Test](https://resourcemanager.netlify.app/api/storage/view?id=65b61bcf79f12d361ce1)|虾皮对外接口测试工具|
+|[Admin](https://open.admin.shopee.io/)|![API list](https://resourcemanager.netlify.app/api/storage/view?id=65b640a6aa17b83fbcc8)![API detail](https://resourcemanager.netlify.app/api/storage/view?id=65b618bc9690e5a985e8)|虾皮内部人员管理开发者账号、虾皮对外接口文档、测试APP以及API授权|
+    - 2021年-2023年陆续参与内容分发模块、APP模块、开发者模块、授权管理模块、API文档管理模块、权限控制模块等工作
 - **2022年**
   - **卖家增值服务**
+|平台|截图|功能|
+|:--|:-:|:--|
+|SVS in Shopee App|-|卖家在APP上购买、查看增值服务的订单|
+|[Seller Value-add Service](https://seller.staging.shopee.sg/admin/payment/value-added/item/coins/list)|![SVS voucher list](https://resourcemanager.netlify.app/api/storage/view?id=65b64fb6f1986a6394ba)![SVS voucher detail](https://resourcemanager.netlify.app/api/storage/view?id=65b653ebce1fb5346f88)![SVS item approve](https://resourcemanager.netlify.app/api/storage/view?id=65b65650d2a41219bb8b)|虾皮内部人员配置虾皮币、虾皮广告、折扣券等卖家增值服务和发票管理，并审核卖家增值服务的创建与修改|
+    - 2022年陆续参与折扣券模块、审核模块、大陆地区发票模块、移动端RN状态库迁移（`redux-saga`迁移到`@reduxjs/toolkit`）等工作
+      > `redux-saga`使用生成器函数实现异步，原代码在管理状态的同时进行业务逻辑处理，导致难以维护
+      > `@reduxjs/toolkit`支持将状态分离为单独的slice（原子化），可以减少状态与业务之间的耦合
   - 图片/PDF查看器组件：Vue组件，实现了放大、缩小、PDF滚动换页的功能
   - 页面编辑状态锁：TS，单例模式，使用`promise`拦截`vue-router`和浏览器的跳转
   - 前端接口类型及代码生成器：NodeJS，使用puppeteer代理浏览器获取yapi的接口响应，生成api的请求、响应参数ts接口定义与接口请求代码
 - **2023年**
   - **卖家入驻服务**
-  - **移动端组件库**：Vue，实现页面框架组件（IntersectObserver）、抽屉组件（异步Animate动画、可扩展）、日期组件（垂直滚轮、IntersectObserver）、地址组件（CSS动画）、单/多选组件、列表组件（上滑加载、IntersectObserver、MutationObserver）、验证码组件（代理隐藏输入框）、步骤条组件（CSS变量、`:has`、`:where`、`:not`）
+|平台|截图|功能|
+|:--|:-:|:--|
+|(=3)[CN Cross-Origin Seller Onboarding](https://shopee.cn/)|![CN BD](https://resourcemanager.netlify.app/api/storage/view?id=65b6634039635b8dbcbe)|大陆地区招商与跨境卖家入驻|
+|![CN onboarding intro](https://resourcemanager.netlify.app/api/storage/view?id=65b664655de377ed8e6d)|移动端入驻介绍|
+|![CN onboarding form](https://resourcemanager.netlify.app/api/storage/view?id=65b66540b5eb33bc73fe)|移动端入驻表单|
+|Local Seller Center Onboarding|-|当地卖家入驻|
+|Local Shopee APP Onboarding|-|当地卖家入驻|
+      - 2023年陆续参与低代码平台、当地卖家入驻（TH）、当地卖家KYC（SG、MY）、CN跨境卖家入驻适配移动端等工作
+        > 低代码平台用于解决各地区字段输入组件相似，但语言、含义不同以及输入字段经常变动，进而导致开发缓慢的问题。低代码平台目前仍在完善中，但渲染引擎已在生产环境中使用，各地区、业务分别维护一份JSON配置
+        > 卖家入驻是指卖家提交资料经审核后成为Shopee卖家的过程
+  - **移动端组件库**：Vue，实现页面框架组件（IntersectObserver）、抽屉组件（异步Animate动画、可扩展）、垂直滚轮组件（scroll-snap）、日期组件（IntersectObserver）、地址组件（CSS动画）、单/多选组件、列表组件（上滑加载、IntersectObserver、MutationObserver）、验证码组件（代理隐藏输入框）、步骤条组件（CSS变量、`:has`、`:where`、`:not`）、滑块组件（scroll-snap、IntersectObserver负margin、setTimeout、padding隐藏滚动条）
+    > 适配移动端注意事项：JS兼容性（`scrollend`、`Blob`）、CSS兼容性（`100vh`、`gap`）
   - 低代码平台：Vue2，实现嵌套CSS和Style节点、布局组件（flex、grid）、修复domProps问题、应用
   - [**Resource Manager**](https://resourcemanager.netlify.app/)：React、Netlify、Appwrite，使用需要登录，实现了登录注册模块、MD文档模块（`@golden-tiger/markdown`）、文件存储模块（大文件分块分批上传）、思维导图模块，使用webpack分chunk优化性能
   - [**Best Tools**](https://best-tools.netlify.app/)：React、Netlify、iframe多模块，使用无需登录，实现了二维码生成功能、JS代码运行功能
 - **2024年**
   - [**Resume (gitee)**](https://tigercheng.gitee.io/resume/), [Resume (github)](https://chengchanghu.github.io/resume/)：Vue3，个人简历项目，使用自定义的`CleanWebpackPlugin`、`@golden-tiger/markdown`
 - 开源包
-|时间|项目名|功能|
+|时间|包名|功能|
 |:-:|:--|:--|
 |(=4)2022|[@golden-tiger/difference](https://www.npmjs.com/package/@golden-tiger/difference)|JS npm包，使用广度优先递归遍历两个比较的值（或对象），可通过参数控制数组值的比较顺序、修改比较策略，输出差异项（键的数组、前值、后值），使用尾递归进行优化|
 |[@golden-tiger/regexp-gene](https://www.npmjs.com/package/@golden-tiger/regexp-gene)|TS npm包，从传入的正则表达式参数逆向生成满足该正则表达式的随机字符串|

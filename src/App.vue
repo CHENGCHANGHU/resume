@@ -58,12 +58,30 @@
           </div>
         </template>
       </CollapsibleBox>
+      <CollapsibleBox title="荣誉奖励">
+        <template #content>
+          <div class="award-container">
+            <span>2015年11月</span>
+            <span>于华北电力大学获系级三好学生</span>
+            <span>2017年12月</span>
+            <span>于华北电力大学获系级三好学生</span>
+            <span>2017年12月</span>
+            <span>于华北电力大学获评优二等奖学金</span>
+            <span>2018年12月</span>
+            <span>于江苏徐州获江苏省研究生公益创业科研创新实践大赛二等奖</span>
+            <span>2020年5月</span>
+            <span>于东南大学获“五四表彰”优秀团员</span>
+            <span>2022年6月</span>
+            <span>于深圳虾皮信息科技有限公司获最佳进步奖</span>
+          </div>
+        </template>
+      </CollapsibleBox>
       <CollapsibleBox title="项目经历">
         <template #content>
           <div class="project-container" v-html="projectsHTML"></div>
         </template>
       </CollapsibleBox>
-      <CollapsibleBox title="代码风格">
+      <CollapsibleBox title="编程风格">
         <template #content>
           <div class="project-container" v-html="codingStyleHTML"></div>
         </template>
@@ -175,6 +193,13 @@ const codingStyleHTML = createHTMLString(transform(codingStyle, { output: 'optio
   > span:nth-child(4) {
     margin-bottom: 8px;
   }
+}
+
+.award-container {
+  padding-top: 8px;
+  display: grid;
+  grid-template: auto/120px auto;
+  row-gap: 4px;
 }
 
 .project-container {
