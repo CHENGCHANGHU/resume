@@ -62,6 +62,18 @@
           </div>
         </template>
       </CollapsibleBox>
+      <CollapsibleBox title="科研工作">
+        <template #content>
+          <div class="research-container">
+            <ol>
+              <li>C. Changhu and Y. Peng, "Similarity-Difference Relation Network for Few-Shot Learning," 2021 IEEE International Conference on Artificial Intelligence and Industrial Design (AIID), Guangzhou, China, 2021, pp. 654-658, doi: 10.1109/AIID51893.2021.9456570.</li>
+              <li>专利号：CN113095278A 一种基于UCL的无人驾驶系统对象标识方法和装置（杨鹏; 程昌虎; 艾成铭; 马卫东） 2022-11-18授权</li>
+              <li>专利号：CN113094587A 一种基于知识图谱路径的隐式推荐方法（杨鹏; 艾成铭; 程昌虎; 于晓潭） 2024-04-16授权</li>
+              <li>专利号：CN113378573A 面向内容大数据的小样本关系抽取方法和装置（杨鹏; 娄健; 程昌虎; 张磊宏） 2025-01-10授权</li>
+            </ol>
+          </div>
+        </template>
+      </CollapsibleBox>
       <CollapsibleBox title="荣誉奖励">
         <template #content>
           <div class="award-container">
@@ -228,6 +240,11 @@ const codingStyleHTML = createHTMLString(transform(codingStyle, { output: 'optio
   > span:nth-child(4) {
     margin-bottom: 8px;
   }
+}
+
+.research-container {
+  padding-top: 8px;
+  padding-left: 16px;
 }
 
 .award-container {
